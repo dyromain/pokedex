@@ -5,8 +5,7 @@ import Pagination from '../components/Pagination';
 import { useState } from 'react';
 import useQueryParam from '../utils/hooks/useQueryParam';
 import styles from "../home.module.scss";
-import Button from '../components/button';
-import searchBar from '../components/searchbar'
+
 
 
 const POKEMON_PER_PAGE = 20;
@@ -16,7 +15,7 @@ function getPokeApiUrl(page: number) {
   return '/pokemon?offset=${offset}&limit=${POKEMON_PER_PAGE}';
 }
 
-export default function HomePage() {
+export default function Pokedex() {
 const queryParams = useQueryParam();
 const navigate = useNavigate();
 let initialPage = Number(queryParams.get('page')) || 1;
@@ -37,15 +36,26 @@ const { data: pokemonList, loading, error } = usePokeApi<IPokemonList>(url);
 
   return (
     <div className={styles.home}>
-      <h3>What Pokemon are you looking for ?</h3>
-      <searchBar></searchBar>
-      <Button color="green" content="pokedex" link="/pokedex"/>
-      <Button color="red" content="moves" link="#"/>
-      <Button color="lightblue" content="abilities" link="#"/>
-      <Button color="yellow" content="items" link="#"/>
-      <Button color="purple" content="locations" link="#"/>
-      <Button color="brown" content="type-charts" link="#"/>
+      <h3>Pokedex</h3>
       
+      <ul>
+      {loading ? <p>Chargement de la liste...</p> : null}
+      {error ? <p>Erreur lors du chargement de la liste...</p> : null}
+        {pokemonList
+          ? pokemonList.results.map(pokemon => (
+          <li key={pokemon.name}>
+            <Link to ={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
+            </li>
+          ))
+          : null}
+      </ul>
+      {pokemonList && (
+      <Pagination
+  currentPage={currentPage}
+  onPageClick={onPageClick}
+  maxPage={pokemonList.count / POKEMON_PER_PAGE}
+/>
+)}
     </div>
   );
 }

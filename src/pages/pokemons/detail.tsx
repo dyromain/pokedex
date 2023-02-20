@@ -7,7 +7,8 @@ import { IPokemonDetail } from "../../../interfaces/PokemonDetail";
 export default function PokemonDetail() {
     const params = useParams();
     const navigate = useNavigate();
-    const { loading, error, data } = usePokeApi<IPokemonDetail>('/pokemon/${params.name}',);
+    const { loading, error, data } = usePokeApi<IPokemonDetail>(`/pokemon/${params.name}`);
+
 
 
 
