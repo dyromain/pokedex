@@ -1,0 +1,20 @@
+
+
+
+/** 
+Ici j'importe tous les styles de base
+*/
+
+@import "./base/variables.scss";
+
+/** 
+Ici j'importe tous les styles des composants
+*/
+
+@import './components/button';
+
+
+/** 
+Ici j'importe tous les styles des pages
+*/
+@import './pages/home', './pages/pokemons/details';

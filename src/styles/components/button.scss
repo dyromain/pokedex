@@ -1,0 +1,44 @@
+.button {
+  /* Le style du bouton */
+
+  color: white;
+  border-radius: 15px;
+  width: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 24px 16px;
+
+  &.green {
+    background: linear-gradient(8.46deg, #46a487 -0.58%, #46d7ab 108.38%);
+
+    &:after {
+      width: 10px;
+      height: 2px;
+      background: #2CDAB1;
+      mix-blend-mode: normal;
+      filter: blur(11.5px);
+      border-radius: 14px;
+    }
+  }
+  &.red {
+    background: linear-gradient(18.53deg, #fc7f63 24.12%, #fdcc6e 108.9%);
+  }
+  &.lightblue {
+    background: linear-gradient(0deg, #58abf7, #58abf7),
+      linear-gradient(7.97deg, #64a9fa -0.55%, #6dc1fd 107.61%);
+    border: #77c4fe;
+  }
+  &.yellow {
+    background: #ffce4b;
+  }
+  &.purple {
+    background: #7c538c;
+  }
+  &.brown {
+    background: #b1736c;
+  }
+}

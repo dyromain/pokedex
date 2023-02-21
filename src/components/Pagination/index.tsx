@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 interface IPaginationProps {
     currentPage: number;
     onPageClick: (page: number) => void;
