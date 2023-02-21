@@ -6,7 +6,6 @@ import { useState } from 'react';
 import useQueryParam from '../utils/hooks/useQueryParam';
 import styles from "../home.module.scss";
 import Button from '../components/button';
-import searchBar from '../components/searchbar'
 
 
 const POKEMON_PER_PAGE = 20;
@@ -38,7 +37,7 @@ const { data: pokemonList, loading, error } = usePokeApi<IPokemonList>(url);
   return (
     <div className={styles.home}>
       <h3>What Pokemon are you looking for ?</h3>
-      <searchBar></searchBar>
+
       <Button color="green" content="pokedex" link="/pokedex"/>
       <Button color="red" content="moves" link="#"/>
       <Button color="lightblue" content="abilities" link="#"/>
