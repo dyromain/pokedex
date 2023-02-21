@@ -1,0 +1,18 @@
+.home {
+  h3 {
+    color: #303943;
+    font-size: 30px;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .row {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+}
