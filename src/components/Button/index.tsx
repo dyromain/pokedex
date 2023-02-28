@@ -6,6 +6,7 @@ interface ButtonProps {
   color: "green" | "red" | "lightblue" | "yellow" | "purple" | "brown";
   content: string;
   link: string;
+
 }
 
 export default function Button({ color, content, link }: ButtonProps) {

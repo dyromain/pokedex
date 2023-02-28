@@ -11,9 +11,23 @@
   font-size: 14px;
   line-height: 14px;
   padding: 24px 16px;
+  
+//*Pokeball decoration *//
+
+    
 
   &.green {
-    background: linear-gradient(8.46deg, #46a487 -0.58%, #46d7ab 108.38%);
+   
+    background-image: url("../../../assets/pokeballdeco.png"), 
+    linear-gradient(8.46deg, #46a487 -0.58%, #46d7ab 108.38%);
+    background-repeat: no-repeat;
+    background-position: 119%;
+
+    
+  
+    
+    
+    
 
     &:after {
       width: 10px;
@@ -22,23 +36,49 @@
       mix-blend-mode: normal;
       filter: blur(11.5px);
       border-radius: 14px;
+      
     }
   }
   &.red {
-    background: linear-gradient(18.53deg, #fc7f63 24.12%, #fdcc6e 108.9%);
+    background-image: url("../../../assets/pokeballdeco.png"),
+    linear-gradient(18.53deg, #FA6555 24.12%, #F7786B 108.9%);
+    background-repeat: no-repeat;
+    background-position: 119%;
+    
+    
+    
   }
   &.lightblue {
-    background: linear-gradient(0deg, #58abf7, #58abf7),
-      linear-gradient(7.97deg, #64a9fa -0.55%, #6dc1fd 107.61%);
+    background-image: url("../../../assets/pokeballdeco.png"), 
+    linear-gradient(0deg, #58abf7, #58abf7),
+    linear-gradient(7.97deg, #64a9fa -0.55%, #6dc1fd 107.61%);
     border: #77c4fe;
+    background-repeat: no-repeat;
+    background-position: 119%;
   }
+
   &.yellow {
-    background: #ffce4b;
+    background-image: url("../../../assets/pokeballdeco.png"),
+    linear-gradient(18.53deg, #FFCE4B 24.12%, #F7C747 108.9%);
+    background-repeat: no-repeat;
+    background-position: 119%;
   }
+
   &.purple {
-    background: #7c538c;
+    background-image: url("../../../assets/pokeballdeco.png"),
+    linear-gradient(18.53deg, #7C538C 24.12%, #9F5BBA 108.9%);
+    background-repeat: no-repeat;
+    background-position: 119%;
   }
+
   &.brown {
-    background: #b1736c;
+    background-image: url("../../../assets/pokeballdeco.png"),
+    linear-gradient(18.53deg, #B1736C 24.12%, #CA8179 108.9%);
+    background-repeat: no-repeat;
+    background-position: 119%;
   }
 }
+
+
+
+

@@ -11,10 +11,10 @@ Ici j'importe tous les styles de base
 Ici j'importe tous les styles des composants
 */
 
-@import './components/button';
+@import './components/button', './components/pokecard';
 
 
 /** 
 Ici j'importe tous les styles des pages
 */
-@import './pages/home', './pages/pokemons/details';
+@import './pages/home', './pages/pokemons/details', './pages/pokedex';

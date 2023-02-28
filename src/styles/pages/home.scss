@@ -1,12 +1,85 @@
+.bg-image {
+  background-image: url("../../../assets/pokeball.png");
+  position: absolute;
+  width: 249px;
+  height: 249.83px;
+  left: 205px;
+  top: 0;
+  background-repeat: no-repeat;
+
+  }
+     
+.news {
+  background: #EBEBEB;
+  }
+    
+.title-news {
+  display:flex;
+  gap:45%;
+  align-items: center;
+  }
+
+.column-news {
+display:flex;
+}
+
+.row-title {
+  display:flex;
+  flex-direction: column;
+}
+
+.image-news {
+background-image:url("../../../assets/pokemon-rumble.png");
+ background-repeat:no-repeat;
+ background-position: center;
+ width:100%;
+  
+}
+
+.title-news2 {
+font-family: 'Circular Std';
+font-size: 14px;
+line-height: 18px;
+color: #303943;
+margin-bottom: 0;
+}
+
+.date-news {
+font-family: 'Circular Std';
+font-size: 10px;
+line-height: 13px;
+color: #303943;
+opacity: 0.6;
+margin-top:6px;
+}
+
 .home {
+
+
+
   h3 {
     color: #303943;
     font-size: 30px;
+    line-height: 42px;
+    font-family: 'Circular Std';
+  
+    margin:auto;
+    padding-top:30%;
   }
+
+  h4 {
+    color: #303943;
+    font-size: 20px;
+    font-family: 'Circular Std';
+  }
+
+
   .column {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background: #FFFFFF;
+    border-radius: 20%;
 
     .row {
       display: flex;
@@ -16,3 +89,13 @@
     }
   }
 }
+
+///<form action="." method="post">
+//<div class="input-search svelte-1aurg7w">
+//<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; transform: rotate(0deg);" 
+//class="svelte-1d1ibzr"><g><circle cx="11" cy="11" r="8"></circle>
+//<line x1="21" y1="21" x2="16.65" y2="16.65"></line></g></svg> 
+//<input type="text" name="search" id="search" placeholder="Nom ou numéro" 
+//class="svelte-1aurg7w">
+//</div></form>//////*
+

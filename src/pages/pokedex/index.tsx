@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { IPokemonList } from "../../../interfaces/PokemonList";
+import { IPokemonDetail } from "../../../interfaces/PokemonDetail";
 import usePokeApi from "../../utils/hooks/usePokeApi";
 import Pagination from "../../components/Pagination";
+import PokeCard from "../../components/Pokecard";
 import useQueryParam from "../../utils/hooks/useQueryParam";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const POKEMON_PER_PAGE = 20;
 
@@ -21,6 +24,7 @@ export default function Pokedex() {
   const [url, setUrl] = useState(getPokeApiUrl(initialPage));
   const { data: pokemonList, loading, error } = usePokeApi<IPokemonList>(url);
 
+
   function onPageClick(page: number) {
     setCurrentPage(page);
     const newUrl = getPokeApiUrl(page);
@@ -33,6 +37,7 @@ export default function Pokedex() {
 
   return (
     <div className="home">
+      <div className="bg-image"></div> 
       <h3>Pokedex</h3>
 
       <ul>
@@ -40,19 +45,30 @@ export default function Pokedex() {
         {error ? <p>Erreur lors du chargement de la liste...</p> : null}
         {pokemonList
           ? pokemonList.results.map((pokemon) => (
+            
               <li key={pokemon.name}>
                 <Link to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
-              </li>
-            ))
-          : null}
-      </ul>
-      {pokemonList && (
-        <Pagination
-          currentPage={currentPage}
-          onPageClick={onPageClick}
-          maxPage={pokemonList.count / POKEMON_PER_PAGE}
-        />
-      )}
-    </div>
-  );
-}
+           
+          
+          
+  
+              </li>           
+              ))
+            : null}
+  
+        </ul>
+        {pokemonList && (
+          <Pagination
+            currentPage={currentPage}
+            onPageClick={onPageClick}
+            maxPage={pokemonList.count / POKEMON_PER_PAGE}
+          />
+        )}
+      </div>
+    );
+  }       
+
+
+             
+
+              
